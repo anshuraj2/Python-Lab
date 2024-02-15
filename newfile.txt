@@ -1,0 +1,35 @@
+>> create table EMP(EMP_NO int , ENAME varchar(15) , JOB varchar(16) ,  HIREDATE date , MGR int , SAL int , COMMISSION int , DEPTNO int);
+
+
+>> create table dept(DEPTNO int primary key , dname varchar(10) , LOC varchar(10));
+
+
+>> alter table emp add constraint pk_empno primary key(EMP_NO);
+
+
+>> alter table EMP add constraint fk_deptNo foreign key (DEPTNO) references DEPT(DEPTNO);
+
+
+>> insert into dept values(10 , 'ACCOUNTING' , 'NEW York');
+
+>> insert into dept values(20 , 'Research' , 'Dewas');
+
+>> alter table dept modify dname varchar(15);
+
+>> insert into dept values(30 , 'Maintanence' , 'Indore');
+
+
+>> insert into emp values(101, 'Alice', 'Manager', '2023-02-14', NULL, 5000, 1000, 10),
+     (102, 'Bob', 'Developer', '2023-02-14', 101, 4000, 800, 20),
+     (103, 'Charlie', 'Analyst', '2023-02-14', 102, 3000, 600, 30),
+     (104, 'David', 'Salesman', '2023-02-14', 103, 2000, 400, 10),
+     (105, 'Eve', 'Clerk', '2023-02-14', 104, 1000, 200, 20),
+     (106, 'Frank', 'Manager', '2023-02-14', NULL, 5000, 1000, 30),
+     (107, 'Grace', 'Developer', '2023-02-14', 106, 4000, 800, 10),
+     (108, 'Hank', 'Analyst', '2023-02-14', 107, 3000, 600, 20),
+     (109, 'Ivy', 'Salesman', '2023-02-14', 108, 2000, 400, 30),
+     (110, 'Jack', 'Clerk', '2023-02-14', 109, 1000, 200, 10);
+
+
+
+
